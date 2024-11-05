@@ -95,7 +95,7 @@ function moveObstacle() {
   obstacleY += ObstacleSpeed
   if (obstacleY>=width){
     obstacleY=0
-    ObstacleSpeed += 1
+    ObstacleSpeed += 0.5
     obstacleX = random(20, height-20);
   }
   // HINT: Increase obstacleX by obstacleSpeed
@@ -143,15 +143,22 @@ function displayStats() {
   text("Score: " + score, 10, 20);
   text("Lives: " + lives, 110, 20);
   text("Speed: " + ObstacleSpeed, 210, 20);
+  textSize(20)
+  
+
   
   // TODO: Add display for hits and speed
 }
 
+
 function displayGameOver() {
-  textSize(20)
   text("Game Over",130,150)
   text("Final socre: " + score, 125,200)
-  text("Press R to Restart",115,250)
+  text("Press R to Restart",110,250)
+
+  
+
+  
   // TODO: Show game over screen
   // HINT: Use textAlign(CENTER, CENTER)
   // Show:
