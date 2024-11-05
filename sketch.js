@@ -143,10 +143,15 @@ function displayStats() {
   text("Score: " + score, 10, 20);
   text("Lives: " + lives, 110, 20);
   text("Speed: " + ObstacleSpeed, 210, 20);
+  
   // TODO: Add display for hits and speed
 }
 
 function displayGameOver() {
+  textSize(20)
+  text("Game Over",130,150)
+  text("Final socre: " + score, 125,200)
+  text("Press R to Restart",115,250)
   // TODO: Show game over screen
   // HINT: Use textAlign(CENTER, CENTER)
   // Show:
@@ -162,6 +167,16 @@ function newCoin() {
 }
 
 function resetGame() {
+  playerX = width/2;
+  playerY = height - 20;
+  ObstacleSpeed = 1
+  obstacleX = random(20, height-20);
+  obstacleY = 0
+  coinX = random(20, width-20);
+  coinY = random(20, height-20);
+  lives = 3
+  score = 0
+  gameOver = false
   // TODO: Reset all game variables
   // HINT: Reset score, hits, speed
   // Set gameOver to false
