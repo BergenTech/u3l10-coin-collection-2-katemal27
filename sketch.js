@@ -96,6 +96,7 @@ function moveObstacle() {
   if (obstacleY>=width){
     obstacleY=0
     ObstacleSpeed += 1
+    obstacleX = random(20, height-20);
   }
   // HINT: Increase obstacleX by obstacleSpeed
   
@@ -122,6 +123,14 @@ function checkCoinCollection() {
 function checkCollisions() {
   // TODO: Check if player hits obstacle
   // HINT: Similar to coin collection
+  if(dist(playerX,playerY,obstacleX,obstacleY)<20){
+    lives-=1
+    if(lives==0){
+      gameOver=true
+    }
+    obstacleX=random(20, height-20);
+    obstacleY = 0
+  }
   // If hit (distance < 20):
   //   - Increase hits
   //   - Check for game over (hits >= 3)
