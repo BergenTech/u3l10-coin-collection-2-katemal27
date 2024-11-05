@@ -5,6 +5,7 @@ let obstacleX, obstacleY;
 let score = 0;
 let ObstacleSpeed = 0
 let gameOver = false;
+let lives = 3
 
 function setup() {
   createCanvas(400, 400);
@@ -131,6 +132,8 @@ function displayStats() {
   fill(0);
   textSize(16);
   text("Score: " + score, 10, 20);
+  text("Lives: " + lives, 110, 20);
+  text("Speed: " + ObstacleSpeed, 210, 20);
   // TODO: Add display for hits and speed
 }
 
