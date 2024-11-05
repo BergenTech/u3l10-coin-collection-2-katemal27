@@ -169,6 +169,11 @@ function resetGame() {
 }
 
 function keyPressed() {
+  if (gameOver){
+    if (key=='r' || key==='R'){
+      resetGame()
+    }
+  }
   // TODO: Check for 'R' key to restart game
   // HINT: Use key === 'r' || key === 'R'
   // Only works when game is over
